@@ -4,8 +4,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 
-/*import Slider from "./component/Slider";*/
-// import Productlist from "./pages/Productlist";
+
 
 ReactDOM.render(
   <React.StrictMode>
