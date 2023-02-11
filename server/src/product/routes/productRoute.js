@@ -10,11 +10,12 @@ const Storage = multer.diskStorage({
   },
 });
 
-// const upload = multer ({
-//     storage: Storage, limits: {fieldSize: 25*1024*1024}
-// }).single('image')
+const upload = multer({
+  storage: Storage,
+  limits: { fieldSize: 25 * 1024 * 1024 },
+}).single("image");
 
-// router.post('/create-product',upload, productController.createProduct );
+router.post("/create-product", upload, productController.createProduct);
 
 router.get("/get-all-product", productController.getAllProduct);
 
