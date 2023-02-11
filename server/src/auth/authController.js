@@ -23,7 +23,6 @@ const Register = async (req, res, next) => {
     // Create account object
     let newAccount = new User({
       email: email,
-
       password: hashPassword,
       verified: true,
     });

@@ -2,8 +2,14 @@ const express = require("express");
 const dotenv = require("dotenv").config();
 const mongoose = require("mongoose");
 const { MongoClient } = require("mongodb");
+const bodyParser = require("body-parser");
 const DB = process.env.MONGO_URI;
 const app = express();
+
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 app.get("/", (req, res) => {
   res.send("Hello I am node.js application");
 });
