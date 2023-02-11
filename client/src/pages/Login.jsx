@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Navbar from '../components/Navbar'
+
 
 const Container = styled.div`
   width: 100vw;
@@ -8,7 +8,7 @@ const Container = styled.div`
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("photo-1570475735025-6cd1cd5c779d.avif")
+    url("https://images.unsplash.com/photo-1506792006437-256b665541e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80")
       center;
   background-size: cover;
   display: flex;
@@ -68,9 +68,7 @@ const Link = styled.a`
 
 const Login = () => {
   return (
-    <div>
-      <Navbar/>
-      <Container>
+    <Container>
       <Wrapper>
         <Title>SIGN IN</Title>
         <Form>
@@ -82,8 +80,6 @@ const Login = () => {
         </Form>
       </Wrapper>
     </Container>
-    </div>
-    
   );
 };
 

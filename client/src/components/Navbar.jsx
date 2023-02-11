@@ -82,12 +82,13 @@ const Navbar = () => {
 
                 </SearchContainer>
             </Left>
-            <Center><Logo>Art Station</Logo></Center>
+            <Center><Logo>Art Store</Logo></Center>
 
             
             <Right>
                 <Link to={`/register`}><MenuItem>Register</MenuItem ></Link>
                 <Link to={`/login`}><MenuItem>Login</MenuItem></Link>
+                <Link to={`/addproduct`}><MenuItem>Add Product</MenuItem></Link>
                 <Link to={`/cart`}>
                 <MenuItem>
                 <Badge badgeContent={4} color="primary">

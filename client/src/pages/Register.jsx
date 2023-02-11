@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Navbar from '../components/Navbar'
+
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
@@ -7,7 +7,7 @@ const Container = styled.div`
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("photo-1567095716798-1d95d8f4c479.avif")
+    url("https://images.unsplash.com/photo-1505909182942-e2f09aee3e89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHBhaW50aW5ncyUyMHdoaXRlJTIwYWJzdHJhY3R8ZW58MHx8MHx8&auto=format&fit=crop&w=2000&q=60")
       center;
   background-size: cover;
   display: flex;
@@ -64,10 +64,7 @@ margin-top: 30px;
 
 const Register = () => {
   return (
-    <div>
-      <Navbar/>
-       <Container>
-      
+    <Container>
       <Wrapper>
         <Title>CREATE AN ACCOUNT</Title>
         <Form>
@@ -81,9 +78,6 @@ const Register = () => {
         </Form>
       </Wrapper>
     </Container>
-    </div>
-    
-   
   );
 };
 
