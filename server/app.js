@@ -8,6 +8,10 @@ app.get("/", (req, res) => {
   res.send("Hello I am node.js application");
 });
 
+const authRoute = require("./src/auth/authRoutes");
+
+app.use("/api/v1/auth", authRoute);
+
 mongoose.connect(
   DB,
   { useNewUrlParser: true, useUnifiedTopology: true },
