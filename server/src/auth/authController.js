@@ -2,6 +2,7 @@ const User = require("../user/userModel");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const Token = require("../utils/Token");
+const Cart = require("../cart/cartModel");
 
 // Register Account
 const Register = async (req, res, next) => {
@@ -30,11 +31,18 @@ const Register = async (req, res, next) => {
     // Save information
     const saveAccount = await newAccount.save();
 
-    if (saveAccount)
+    if (saveAccount) {
+      let message = "Successfully created account";
+      let newCart = new Cart({
+        user: newAccount._id,
+      });
+      const saveCart = await newCart.save();
+      if (saveCart) message += " and cart.";
       return res.status(201).json({
         status: true,
-        message: "Successfully account created",
+        message: message,
       });
+    }
   } catch (error) {
     if (error) next(error);
   }
