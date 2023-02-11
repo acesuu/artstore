@@ -14,9 +14,9 @@ const createCart = async (req, res) => {
       user: req.body.user,
     });
     // Save information
-    const saveAccount = await newCart.save();
+    const saveCart = await newCart.save();
 
-    if (saveAccount)
+    if (saveCart)
       return res.status(201).json({
         status: true,
         message: "Successfully created new cart",

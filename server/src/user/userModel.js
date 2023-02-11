@@ -42,6 +42,9 @@ const userSchema = new Schema(
       trim: true,
       default: null,
     },
+    cart: {
+      type: Schema.Types.ObjectId,
+    },
   },
   {
     timestamps: true,
