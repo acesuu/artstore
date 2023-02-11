@@ -10,6 +10,10 @@ const categorySchema = new mongoose.Schema({
         data: String,
         contentType: String
     },
+
+    description:{
+        type: String
+    },
     
     createdAt:{
         type: Date,
