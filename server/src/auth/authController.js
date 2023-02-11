@@ -1,13 +1,7 @@
-const Doctor = require("../../../models/Doctor");
-const User = require("../../../models/User");
-const Admin = require("../../../models/Admin");
+const User = require("../user/userModel");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
-const Token = require("../../../models/Token");
-const sendEmail = require("../../utils/sendEmail");
-const crypto = require("crypto");
-
-let isDoctor = false;
+const Token = require("../utils/Token");
 
 // Register Account
 const Register = async (req, res, next) => {
