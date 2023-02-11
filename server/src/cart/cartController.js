@@ -1,5 +1,31 @@
 const Cart = require("./cartModel");
 
+const createCart = async (req, res) => {
+  try {
+    const check = await Cart.findOne({ user: req.body.user }).exec();
+
+    if (check) {
+      return res.status(208).json({
+        status: false,
+        message: "This user already has a cart.",
+      });
+    }
+    let newCart = new Cart({
+      user: req.body.user,
+    });
+    // Save information
+    const saveAccount = await newCart.save();
+
+    if (saveAccount)
+      return res.status(201).json({
+        status: true,
+        message: "Successfully created new cart",
+      });
+  } catch (error) {
+    res.send(error);
+  }
+};
+
 const addItem = async (req, res) => {
   try {
     // console.log(req.body.user);
@@ -122,4 +148,5 @@ const doNothing = async (req, res) => {
 module.exports = {
   addItem,
   doNothing,
+  createCart,
 };
