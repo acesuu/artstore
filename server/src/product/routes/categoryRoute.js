@@ -20,3 +20,5 @@ router.post("/create-product", upload, categoryController.createCategory);
 router.get("/get-all-category", categoryController.getAllCategory);
 
 router.delete("/delete-category", categoryController.deleteCatergory);
+
+module.exports = router;

@@ -17,10 +17,12 @@ app.get("/", (req, res) => {
 const authRoute = require("./src/auth/authRoutes");
 const productRoute = require("./src/product/routes/productRoute");
 const categoryRoute = require("./src/product/routes/categoryRoute");
+const cartRoute = require("./src/cart/cartRoutes");
 
 app.use("/api/v1/auth", authRoute);
 // app.use("/api/v1/category", categoryRoute);
 app.use("/api/v1/product", productRoute);
+app.use("/api/v1/user/cart", cartRoute);
 
 mongoose.connect(
   DB,
